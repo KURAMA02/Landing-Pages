@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Goenett Gym</title>
+</head>
+<body>
+
+    <!-- ================= HEADER / HERO SECTION ================= -->
+    <!-- Edit the main headline, subtitle, and CTA button here -->
+    <section id="hero">
+        <h1>Transform Your Body at Goenett Gym</h1>
+        <p>Build strength, burn fat, and become the best version of yourself</p>
+        <a href="https://samplelink.com">
+        <button>Join Now</button>
+        </a>
+    </section>
+
+    <!-- ================= SOCIAL PROOF (TOP) ================= -->
+    <!-- Add testimonials, client logos, or stats here -->
+    <section id="social-proof-top">
+        <h2>Trusted by Hundreds of Members</h2>
+        <p>⭐ 4.9/5 Rating from 500+ Happy Clients</p>
+        <p>"Best gym experience ever!" - John D.</p>
+    </section>
+
+    <!-- ================= MAIN VISUAL / IMAGE ================= -->
+    <!-- Replace the image source with your main gym image -->
+    <section id="main-image">
+        <img src="images/gym-main.jpg" alt="Gym Image" width="100%">
+    </section>
+
+    <!-- ================= BEST SELLER SERVICES ================= -->
+    <!-- Showcase your most popular services or programs -->
+    <section id="services">
+        <h2>Our Best Programs</h2>
+
+        <div class="service-card">
+            <img src="images/weight-training.jpg" alt="Weight Training">
+            <h3>Weight Training</h3>
+            <p>Build muscle and increase strength</p>
+        </div>
+
+        <div class="service-card">
+            <img src="images/cardio.jpg" alt="Cardio Training">
+            <h3>Cardio Training</h3>
+            <p>Burn calories and improve endurance</p>
+        </div>
+
+        <div class="service-card">
+            <img src="images/personal-training.jpg" alt="Personal Training">
+            <h3>Personal Coaching</h3>
+            <p>1-on-1 guidance for faster results</p>
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES & BENEFITS ================= -->
+    <!-- Explain WHY your gym is the best choice -->
+    <section id="features">
+        <h2>Why Choose Goenett Gym?</h2>
+
+        <ul>
+            <li>✔ Modern Equipment for All Fitness Levels</li>
+            <li>✔ Certified Professional Trainers</li>
+            <li>✔ Affordable Membership Plans</li>
+            <li>✔ Friendly and Motivating Environment</li>
+        </ul>
+    </section>
+
+    <!-- ================= MORE SOCIAL PROOF ================= -->
+    <!-- Add more testimonials here -->
+    <section id="social-proof-bottom">
+        <h2>What Our Members Say</h2>
+
+        <p>"I lost 10kg in 3 months!" - Sarah M.</p>
+        <p>"The trainers are very supportive!" - Mike T.</p>
+    </section>
+
+    <!-- ================= FAQ SECTION ================= -->
+    <!-- Edit questions and answers based on your gym -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Do I need experience to join?</h3>
+        <p>No, beginners are welcome!</p>
+
+        <h3>What are your opening hours?</h3>
+        <p>We are open daily from 6AM to 10PM.</p>
+
+        <h3>Do you offer personal training?</h3>
+        <p>Yes, we have certified trainers available.</p>
+    </section>
+
+    <!-- ================= FINAL CALL TO ACTION ================= -->
+    <!-- Strong closing CTA -->
+    <section id="final-cta">
+        <h2>Start Your Fitness Journey Today</h2>
+        <a href="https://samplelink.com">
+        <button>Sign Up Now</button>
+        </a>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- Edit contact info, social links, etc. -->
+    <footer>
+        <p>© 2026 Goenett Gym. All Rights Reserved.</p>
+    </footer>
+    <script>
+const sections = document.querySelectorAll("section:not(#hero)");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+</script>
+</body>
+</html>
